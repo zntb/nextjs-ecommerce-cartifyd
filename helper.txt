@@ -1,0 +1,10 @@
+Sanity:
+https://www.sanity.io/manage
+
+Create a sanity project in terminal:
+npx sanity@latest init -> yes all
+
+Studio vidsion fetch product: 
+*[_type == "product"]{
+  name
+}
