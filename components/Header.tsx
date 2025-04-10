@@ -6,11 +6,11 @@ import CartIcon from './CartIcon';
 import FavoriteButton from './FavoriteButton';
 import SignIn from './SignIn';
 import MobileMenu from './MobileMenu';
-// import { currentUser } from '@clerk/nextjs/server';
-// import { ClerkLoaded, SignedIn, UserButton } from '@clerk/nextjs';
+import { currentUser } from '@clerk/nextjs/server';
+import { ClerkLoaded, SignedIn, UserButton } from '@clerk/nextjs';
 
 const Header = async () => {
-  //   const user = await currentUser();
+  const user = await currentUser();
 
   return (
     <header className='sticky top-0 z-50 py-5 bg-white/70 backdrop-blur-md'>
@@ -24,13 +24,12 @@ const Header = async () => {
           <SearchBar />
           <CartIcon />
           <FavoriteButton />
-          <SignIn />
-          {/*   <ClerkLoaded>
+          <ClerkLoaded>
             <SignedIn>
               <UserButton />
             </SignedIn>
             {!user && <SignIn />}
-          </ClerkLoaded> */}
+          </ClerkLoaded>
         </div>
       </Container>
     </header>
