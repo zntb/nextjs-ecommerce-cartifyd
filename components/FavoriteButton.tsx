@@ -1,14 +1,15 @@
-// import { Product } from '@/sanity.types';
+import { Product } from '@/sanity.types';
 import { Heart } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
 const FavoriteButton = ({
   showProduct = false,
-}: //   product,
-{
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  product,
+}: {
   showProduct?: boolean;
-  //   product?: Product | null | undefined;
+  product?: Product | null | undefined;
 }) => {
   return (
     <>
