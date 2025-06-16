@@ -52,7 +52,12 @@ export async function createCheckoutSession(
       line_items: items?.map((item) => ({
         price_data: {
           currency: 'USD',
-          unit_amount: Math.round(item?.product?.price! * 100),
+          unit_amount:
+            item?.product?.price !== undefined
+              ? Math.round(item.product.price * 100)
+              : (() => {
+                  throw new Error('Product price is undefined');
+                })(),
           product_data: {
             name: item?.product?.name || 'Unknown Product',
             description: item?.product?.description,
