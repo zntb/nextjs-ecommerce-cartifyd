@@ -17,31 +17,31 @@ const ProductCharacteristics = async ({
   console.log(brand);
 
   return (
-    <Accordion type='single' collapsible>
-      <AccordionItem value='item-1'>
+    <Accordion type="single" collapsible>
+      <AccordionItem value="item-1">
         <AccordionTrigger>{product?.name}: Characteristics</AccordionTrigger>
         <AccordionContent>
-          <p className='flex items-center justify-between'>
+          <p className="flex items-center justify-between">
             Brand:{' '}
             {brand && (
-              <span className='font-semibold tracking-wide'>
+              <span className="font-semibold tracking-wide">
                 {brand[0]?.brandName}
               </span>
             )}
           </p>
-          <p className='flex items-center justify-between'>
+          <p className="flex items-center justify-between">
             Collection:{' '}
-            <span className='font-semibold tracking-wide'>2025</span>
+            <span className="font-semibold tracking-wide">2025</span>
           </p>
-          <p className='flex items-center justify-between'>
+          <p className="flex items-center justify-between">
             Type:{' '}
-            <span className='font-semibold tracking-wide'>
+            <span className="font-semibold tracking-wide">
               {product?.variant}
             </span>
           </p>
-          <p className='flex items-center justify-between'>
+          <p className="flex items-center justify-between">
             Stock:{' '}
-            <span className='font-semibold tracking-wide'>
+            <span className="font-semibold tracking-wide">
               {product?.stock ? 'Available' : 'Out of Stock'}
             </span>
           </p>

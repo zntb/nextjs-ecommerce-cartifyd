@@ -10,18 +10,18 @@ const Logo = ({
   spanDesign?: string;
 }) => {
   return (
-    <Link href={'/'} className='inline-flex'>
+    <Link href={'/'} className="inline-flex">
       <h2
         className={cn(
           'text-2xl text-shop_dark_green font-black tracking-wider uppercase hover:text-shop_light_green hoverEffect group font-sans',
-          className,
+          className
         )}
       >
         Cartify
         <span
           className={cn(
             'text-shop_light_green group-hover:text-shop_dark_green hoverEffect',
-            spanDesign,
+            spanDesign
           )}
         >
           d

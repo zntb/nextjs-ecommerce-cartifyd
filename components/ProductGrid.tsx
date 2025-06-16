@@ -33,22 +33,23 @@ const ProductGrid = () => {
       }
     };
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTab]);
 
   return (
-    <Container className='flex flex-col lg:px-0 my-10'>
+    <Container className="flex flex-col lg:px-0 my-10">
       <HomeTabbar selectedTab={selectedTab} onTabSelect={setSelectedTab} />
       {loading ? (
-        <div className='flex flex-col items-center justify-center py-10 min-h-80 space-y-4 text-center bg-gray-100 rounded-lg w-full mt-10'>
-          <motion.div className='flex items-center space-x-2 text-blue-600'>
-            <Loader2 className='w-5 h-5 animate-spin' />
+        <div className="flex flex-col items-center justify-center py-10 min-h-80 space-y-4 text-center bg-gray-100 rounded-lg w-full mt-10">
+          <motion.div className="flex items-center space-x-2 text-blue-600">
+            <Loader2 className="w-5 h-5 animate-spin" />
             <span>Product is loading...</span>
           </motion.div>
         </div>
       ) : products?.length ? (
-        <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 mt-10'>
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 mt-10">
           <>
-            {products?.map(product => (
+            {products?.map((product) => (
               <AnimatePresence key={product?._id}>
                 <motion.div
                   layout
